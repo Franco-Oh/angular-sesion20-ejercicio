@@ -1,0 +1,10 @@
+<p>home works!</p>
+
+<button *ngIf="!mostrar" (click)="quieroMostrar()">Mostrar usuarios</button>
+<button *ngIf="mostrar" (click)="quieroNoMostrar()">Ocultar usuarios</button>
+
+<ul *ngIf="mostrar">
+    <li *ngFor="let user of users">
+        {{user.name | json}}
+    </li>
+</ul>
